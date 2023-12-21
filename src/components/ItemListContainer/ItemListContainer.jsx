@@ -11,7 +11,8 @@ const ItemListContainer = ({datosProducto}) => {
               datosProducto.map((productos) => {
                 return(
                   <Card key={productos.id} style={{ width: '18rem' }}>
-                      <Card.Img variant="top" src="productos.thumbnail" />
+                      <link to={'/item/${productos.id}'} />
+                      <Card.Img variant="top" src="$productos.thumbnail" />
                       <Card.Body>
                         <Card.Title>{productos.title}</Card.Title>
                         <Card.Text>

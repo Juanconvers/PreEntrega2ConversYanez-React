@@ -1,7 +1,20 @@
 
 const ItemDetailContainer = () => {
   return (
-    <div>ItemDetailContainer</div>
+    <Card key={productos.id} style={{ width: '18rem' }}>
+      <link to={'/item/${productos.id}'} />
+      <Card.Img variant="top" src="$productos.thumbnail" />
+      <Card.Body>
+        <Card.Title>{productos.title}</Card.Title>
+        <Card.Text>
+          {productos.description}
+        </Card.Text>
+        <div>
+          {productos.price}
+        </div>
+        <Button variant="primary">Comprar</Button>
+      </Card.Body>
+    </Card>
   )
 }
 

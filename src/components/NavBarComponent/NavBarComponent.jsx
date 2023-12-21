@@ -11,9 +11,9 @@ const NavBarComponent = () => {
   return (
     <Navbar expand="lg" bg="primary" data-bs-theme="dark" className="bg-body-tertiary" style={{background: "#f4a460", padding: "10", fontWeight: "700"}}>
       <Container fluid>
-        <Navbar.Brand href="#">
+        <Link to="/">
             <img src={Logo} alt="LogoHome" style={{width: 120, padding:15}}/>
-        </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
