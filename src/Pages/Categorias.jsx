@@ -1,7 +1,7 @@
-import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 
-const Home = () => {
- 
+
+const Categorias = () => {
+
     const [datosProducto, setdatosProducto] = useState([]);
 
     useEffect(() => {
@@ -17,4 +17,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Categorias
