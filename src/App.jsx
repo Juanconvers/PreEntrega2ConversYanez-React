@@ -4,7 +4,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Card from './components/Product/Product';
+import Product from './components/Product/Product';
 
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
       <div style={{width: "100vw", height: "100vh"}}>
         <NavBarComponent/>
         <ItemListContainer greeting="¡Bienvenidos a la mejor tienda de Moda Infantil!"/>
-        <Card/>
+        <Product/>
       </div> 
   )
 }
