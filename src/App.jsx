@@ -4,11 +4,24 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Product from './components/Product/Product';
+
 
 
 const App = () => {
   
+
+  const [datosProducto, setdatosProducto] = useState([]);
+
+    useEffect(() => {
+        fetch("https://dummyjson.com/products")
+        .then(response => response.json()
+        )
+        .then((data) => {
+            setdatosProducto(data);
+            // console.log(data);
+        })
+    }, [])
+
   // useEffect(() => {
   //     getProducts()
   //     .then(response => {
@@ -22,8 +35,8 @@ const App = () => {
   return (
       <div style={{width: "100vw", height: "100vh"}}>
         <NavBarComponent/>
-        <ItemListContainer greeting="¡Bienvenidos a la mejor tienda de Moda Infantil!"/>
-        <Product/>
+        <ItemListContainer datosProducto={datosProducto}/>
+      
       </div> 
   )
 }
