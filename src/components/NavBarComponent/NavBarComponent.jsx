@@ -2,6 +2,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import Cartwidget from '../CartWidget/Cartwidget';
 
 import Logo from "../../assets/img/LogoFrankyCharly.png"
@@ -20,10 +21,12 @@ const NavBarComponent = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Niños</Nav.Link>
-            <Nav.Link href="#action2">Niñas</Nav.Link>
-            <Nav.Link href="#action3">Accesorios</Nav.Link>
-            <Nav.Link href="#action4">Políticas</Nav.Link>
+            <Nav.Link href="#action1">Accesorios</Nav.Link>
+            <Nav.Link href="#action2">Políticas</Nav.Link>
+            <NavDropdown title="Categorías" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Niñas</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Niños</NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
         

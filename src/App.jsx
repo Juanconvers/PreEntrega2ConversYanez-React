@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import NavBarComponent from "./components/NavBarComponent/NavBarComponent";
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Home from './Pages/Home';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
@@ -10,17 +11,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => {
   
 
-  const [datosProducto, setdatosProducto] = useState([]);
 
-    useEffect(() => {
-        fetch("https://dummyjson.com/products")
-        .then(response => response.json()
-        )
-        .then((data) => {
-            setdatosProducto(data);
-            // console.log(data);
-        })
-    }, [])
+
+
 
   // useEffect(() => {
   //     getProducts()
@@ -35,7 +28,8 @@ const App = () => {
   return (
       <div style={{width: "100vw", height: "100vh"}}>
         <NavBarComponent/>
-        <ItemListContainer datosProducto={datosProducto}/>
+        
+      
       
       </div> 
   )
