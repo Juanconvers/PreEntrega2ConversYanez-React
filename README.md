@@ -3,7 +3,14 @@ Preentrega No. 2 curso React.js Coderhouse
 
                                             NOTAS DE LA PREENTREGA No. 2
 
-Nota No. 1: Inconvenientes al desarrollar la entrega: 
+        Nota No. 2: Resolución de los problemas descritos en Nota no. 1:
+
+1. AXIOS, FETCH Y API DEL PROFESOR 
+
+Logré detectar el error  en la implementación de Axios en la importación de la API y volví a seguir el contenido del profesor en clase. Desistí del uso de fetch para traer la información de la API. Para efectos prácticos, hasta terminar el contenido de la entrega, he usado la API (https://dummyjson.com/docs/products) para luego cambiarla por una de mi preferencia.
+
+
+        Nota No. 1: Inconvenientes al desarrollar la entrega: 
 
 1. USO DE FETCH EN LUGAR DE AXIOS
 

@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "../Pages/Home"
+import Categorias from "../Pages/Categorias";
+import ItemDetailContainer from "../Pages/ItemDetailContainer";
 import NavBarComponent from "../components/NavBarComponent/NavBarComponent";
 
 export const RouterPrincipal = () => {
