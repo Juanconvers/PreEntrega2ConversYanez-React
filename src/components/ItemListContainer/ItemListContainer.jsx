@@ -3,10 +3,10 @@ import Card from "react-bootstrap/Card";
 
 const ItemListContainer = ({datosProducto}) => {
   return (
-      <div>
+      <div style={{width: '100vw', height: '100vh', display: 'flex', flexWrap: 'wrap'}}>
         {datosProducto.map((products) => {
           return (
-            <Card key={products.id} style={{ width: "18rem" }}>
+            <Card key={products.id} style={{ width: "18rem" , margin: 15}}>
               <Card.Img variant="top" src={products.thumbnail} />
               <Card.Body>
                 <Card.Title>{products.title}</Card.Title>

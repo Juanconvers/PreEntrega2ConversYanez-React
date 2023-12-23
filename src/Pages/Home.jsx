@@ -1,20 +1,13 @@
-// import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
+import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
+import { useGetProducts } from '../hooks/useProducts';
 
-// const Home = () => {
+const Home = () => {
  
-//     const [datosProducto, setdatosProducto] = useState([]);
+    const {datosProducto} = useGetProducts();
 
-//     useEffect(() => {
-//         fetch("https://dummyjson.com/products")
-//         .then(response => response.json())
-//         .then((datosProducto) => setdatosProducto(datosProducto));     
-//     }, [])
-  
-//     console.log(datosProducto)
+    return (
+    <ItemListContainer datosProducto={datosProducto}/>
+  )
+}
 
-//     return (
-//     <ItemListContainer datosProducto={datosProducto}/>
-//   )
-// }
-
-// export default Home
+export default Home
