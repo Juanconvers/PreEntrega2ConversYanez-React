@@ -1,20 +1,14 @@
+import { useParams } from 'react-router-dom'
+import { useGetProductsByCategory } from '../hooks/useProducts';
+import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 
+export const Categorias = () => {
 
-const Categorias = () => {
+    const [id] = useParams();
 
-    const [datosProducto, setdatosProducto] = useState([]);
-
-    useEffect(() => {
-        fetch("https://dummyjson.com/products")
-        .then(response => response.json())
-        .then((datosProducto) => setdatosProducto(datosProducto));     
-    }, [])
-  
-    console.log(datosProducto)
+    const {datosProducto} = useGetProductsByCategory(id)
 
     return (
     <ItemListContainer datosProducto={datosProducto}/>
   )
 }
-
-export default Categorias

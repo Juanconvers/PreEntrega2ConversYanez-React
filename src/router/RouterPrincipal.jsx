@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "../Pages/Home"
-import Categorias from "../Pages/Categorias";
 import ItemDetailContainer from "../Pages/ItemDetailContainer";
 import NavBarComponent from "../components/NavBarComponent/NavBarComponent";
+import { Categorias } from "../Pages/Categorias";
 
 export const RouterPrincipal = () => {
   return (
@@ -12,8 +12,6 @@ export const RouterPrincipal = () => {
           <Route path='/' element={<Home/>} /> 
           <Route path='/category/:id' element={<Categorias/>} /> 
           <Route path='/item/:id' element={<ItemDetailContainer/>} /> 
-
-        
         </Routes>
       </BrowserRouter>
   )
