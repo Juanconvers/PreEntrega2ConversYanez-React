@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,9 +11,9 @@ const NavBarComponent = () => {
   return (
     <Navbar expand="lg" bg="primary" data-bs-theme="dark" className="bg-body-tertiary" style={{background: "#f4a460", padding: "10", fontWeight: "700"}}>
       <Container fluid>
-        <div>
+        <Link to="/">
             <img src={Logo} alt="LogoHome" style={{width: 120, padding:15}}/>
-        </div>
+        </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

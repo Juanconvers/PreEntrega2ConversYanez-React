@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
@@ -7,7 +8,7 @@ const ItemListContainer = ({datosProducto}) => {
         {datosProducto.map((products) => {
           return (
             <Card key={products.id} style={{ width: "18rem" , margin: 15}}>
-              <Card.Img variant="top" src={products.thumbnail} />
+               <Link to={`/item/${products.id}`}><Card.Img variant="top" src={products.thumbnail} /></Link>
               <Card.Body>
                 <Card.Title>{products.title}</Card.Title>
                 <Card.Text>
