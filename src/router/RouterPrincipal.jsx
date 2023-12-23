@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "../Pages/Home"
-import NavBar from "../components/NavBarComponent/NavBarComponent";
+import NavBarComponent from "../components/NavBarComponent/NavBarComponent";
 
 export const RouterPrincipal = () => {
   return (
     <BrowserRouter>
-      <NavBar />
+      <NavBarComponent />
         <Routes>
           <Route path='/' element={<Home/>} /> 
           <Route path='/category/:id' element={<Categorias/>} /> 
@@ -17,4 +17,4 @@ export const RouterPrincipal = () => {
   )
 }
 
-export default RouterPrincipal 
+export default RouterPrincipal

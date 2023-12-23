@@ -18,4 +18,4 @@ export const useGetProducts = (limit) => {
   return {datosProducto}
 }
 
-export default useProducts
+export default useGetProducts
