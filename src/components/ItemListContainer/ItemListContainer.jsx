@@ -2,32 +2,25 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 const ItemListContainer = ({datosProducto}) => {
-  console.log(datosProducto);
-        
-          
+  return (
+      <div>
+        {datosProducto.map((products) => {
           return (
-            <div>
-              {
-              datosProducto.map((productos) => {
-                return(
-                  <Card key={productos.id} style={{ width: '18rem' }}>
-                      <link to={'/item/${productos.id}'} />
-                      <Card.Img variant="top" src="$productos.thumbnail" />
-                      <Card.Body>
-                        <Card.Title>{productos.title}</Card.Title>
-                        <Card.Text>
-                          {productos.description}
-                        </Card.Text>
-                        <div>
-                          {productos.price}
-                        </div>
-                        <Button variant="primary">Comprar</Button>
-                      </Card.Body>
-                    </Card>
-                  );
-                })}
-            </div>
-          )
-        }
-        
-export default ItemListContainer
+            <Card key={products.id} style={{ width: "18rem" }}>
+              <Card.Img variant="top" src={products.thumbnail} />
+              <Card.Body>
+                <Card.Title>{products.title}</Card.Title>
+                <Card.Text>
+                {products.description}
+                </Card.Text>
+                <div>{products.price}</div>
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+          );
+        })}
+      </div>
+  );
+};
+
+export default ItemListContainer;

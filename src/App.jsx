@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 // import RouterPrincipal from './router/RouterPrincipal';
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     getProducts()
       .then((response) => {
-        setdatosProducto(response.data.productos)
+        setdatosProducto(response.data.products)
       })
       .catch((error) => {
         console.log(error);
